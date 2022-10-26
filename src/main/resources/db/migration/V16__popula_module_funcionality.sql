@@ -1,0 +1,16 @@
+insert into seguranca.module_funcionality values
+('CADLOGIN','INS'),
+('CADLOGIN','UPD'),
+('CADLOGIN','DLT'),
+('CADLOGIN','DSP'),
+('CADFUNC','INS'),
+('CADFUNC','UPD'),
+('CADFUNC','DLT'),
+('CADFUNC','DSP'),
+('CADGRPS','INS'),
+('CADGRPS','UPD'),
+('CADGRPS','DLT'),
+('CADGRPS','DSP'),
+('CADMOD','UPD'),
+('CADMOD','DLT'),
+('CADMOD','DSP');
