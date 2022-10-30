@@ -13,3 +13,45 @@ spring:
         dialect: org.hibernate.dialect.MySQL8Dialect
     show-sql: true
   
+# Disabling the /v3/api-docs endpoint
+springdoc:
+  api-docs:
+    enabled: false
+    path: /api-docs
+  pathsToMatch: /api/**/v1/
+
+    
+  swagger-ui: #For custom path of the swagger-ui HTML documentation.
+    path: /swagger-ui.html  
+    tagsSorter: alpha
+    use-root-path: true 
+
+  cache:
+    disabled: true
+  
+# Disabling the swagger-ui
+#springdoc.swagger-ui.enabled=false
+
+# Packages to include
+#springdoc.packagesToScan=br.com.swaggers.config
+
+# Paths to include - f you have only one Docket — remove it and instead add properties to your application.properties
+#springdoc.pathsToMatch=/v1, /examples/**
+
+# To disable the springdoc-openapi automatic tags - f you have only one Docket — remove it and instead add properties to your application.properties
+#springdoc.auto-tag-classes=false
+
+# To disable the springdoc-openapi groups.
+#springdoc.api-docs.groups.enabled=true
+
+#To enable pretty print of the OpenApi specification.
+#springdoc.writer-with-default-pretty-printer=false
+
+
+#springdoc.swagger-ui.disable-swagger-default-url=true
+
+
+#For sorting endpoints alphabetically
+#springdoc.swagger-ui.operationsSorter=alpha
+#For sorting tags alphabetically
+#springdoc.swagger-ui.tagsSorter=alpha

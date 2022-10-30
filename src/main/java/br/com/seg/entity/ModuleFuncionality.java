@@ -7,7 +7,7 @@ package br.com.seg.entity;
 import javax.persistence.EmbeddedId;
 
 import br.com.seg.embeddeable.ModuleFuncionalityEmb;
-import jakarta.persistence.Column;
+import javax.persistence.Column;
 
 public class ModuleFuncionality {
 

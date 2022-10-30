@@ -5,12 +5,12 @@ package br.com.seg.entity;
  * Base para o restante do cadastramento
  */
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 
 
@@ -33,13 +33,4 @@ public class Fornecedor {
 	@Column(name = "for_mail", unique = true, nullable = false)
 	private String email;
 
-	/*@ManyToMany(fetch = FetchType.LAZY)
-	@JoinTable(name = "UserGroup" , joinColumns = {
-			@JoinColumn(name = "for_id", nullable = false)
-	},
-	inverseJoinColumns = {
-			@JoinColumn(name = "user_id", nullable = false)
-	})
-	private List<User> users;
-*/
 }

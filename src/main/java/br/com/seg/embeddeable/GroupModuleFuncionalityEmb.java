@@ -1,10 +1,17 @@
 package br.com.seg.embeddeable;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Embeddable;
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
 
 @Embeddable
-public class GroupModuleFuncionalityEmb {
+public class GroupModuleFuncionalityEmb implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Column(name = "for_id")
 	private long ForId;
 	

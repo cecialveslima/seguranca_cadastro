@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.0.0-M4</version>
+		<version>2.7.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.seguranca</groupId>
@@ -20,12 +20,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.hibernate.javax.persistence/hibernate-jpa-2.1-api -->
-		<dependency>
-		    <groupId>org.hibernate.javax.persistence</groupId>
-		    <artifactId>hibernate-jpa-2.1-api</artifactId>
-		    <version>1.0.0.Final</version>
 		</dependency>
 
 		<dependency>
@@ -69,8 +63,53 @@
 		    <groupId>org.flywaydb</groupId>
 		    <artifactId>flyway-mysql</artifactId>
 		</dependency>
+			
+	   <dependency>
+	      <groupId>org.springdoc</groupId>
+	      <artifactId>springdoc-openapi-webmvc-core</artifactId>
+	      <version>1.6.12</version>
+	   </dependency>
+			
+		<!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui -->
+		<!-- Responsável pelo Visual do swagger também -->
+		<dependency>
+		    <groupId>org.springdoc</groupId>
+		    <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+		    <version>2.0.0-M7</version>
+		</dependency>
 
+					
+		<dependency>
+		     <groupId>org.springdoc</groupId>
+		     <artifactId>springdoc-openapi-ui</artifactId>
+		     <version>1.6.11</version>
+		</dependency>
+		
+		<dependency>
+		      <groupId>org.springdoc</groupId>
+		      <artifactId>springdoc-openapi-javadoc</artifactId>
+		      <version>1.6.12</version>
+		  </dependency>
+		
+		<!-- https://mvnrepository.com/artifact/jakarta.persistence/jakarta.persistence-api -->
+		<dependency>
+		    <groupId>jakarta.persistence</groupId>
+		    <artifactId>jakarta.persistence-api</artifactId>
+		</dependency>
+			
+		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-boot-starter -->
+		<dependency>
+		    <groupId>io.springfox</groupId>
+		    <artifactId>springfox-boot-starter</artifactId>
+		    <version>3.0.0</version>
+		</dependency>
 
+		<dependency>
+		    <groupId>io.springfox</groupId>
+		    <artifactId>springfox-swagger-ui</artifactId>
+		    <version>3.0.0</version>
+		</dependency>
+			
 	</dependencies>
 
 	<build>
@@ -78,29 +117,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			
-		<plugin>
-			   <groupId>org.flywaydb</groupId>
-			   <artifactId>flyway-maven-plugin</artifactId>
-			   <configuration>
-			      <url>jdbc:mysql://localhost:3306/seguranca?useTimezone=true&amp;serverTimezone=UTC&amp;useSSL=false</url>
-			      <user>root</user>
-			      <password>123456</password>
-			   </configuration>
-			   <dependencies>
-			      <dependency>
-			         <groupId>mysql</groupId>
-			         <artifactId>mysql-connector-java</artifactId>
-			         <version>${mysql.version}</version>
-			         <exclusions>
-			            <exclusion>
-			               <artifactId>slf4j-api</artifactId>
-			               <groupId>org.slf4j</groupId>
-			            </exclusion>
-			         </exclusions>
-			      </dependency>
-			   </dependencies>
 			</plugin>
 		</plugins>
 	</build>
@@ -120,7 +136,8 @@
 			<name>Spring Milestones</name>
 			<url>https://repo.spring.io/milestone</url>
 			<snapshots>
-				<enabled>false</enabled>
+			<!-- Habilita releases que ainda estão em desenvolvimento das dependências -->
+				<enabled>false</enabled> 
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
