@@ -1,5 +1,4 @@
 <h1> Projeto básico de cadastramento de logins, módulos e funcionalidades </h1>
-
 <b><h6>Projeto com banco de dados MySQL</h6></b>  
 <b><h6>Ordem de gravação das tabelas</h6></b>
 
