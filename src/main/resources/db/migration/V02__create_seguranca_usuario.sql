@@ -24,10 +24,11 @@ DROP TABLE IF EXISTS `usuario`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usuario` (
   `user_id` varchar(20) NOT NULL,
-  `cod_ven` int NOT NULL,
-  `user_sts` bit(1) DEFAULT NULL,
   `user_name` varchar(60) NOT NULL,
   `user_mail` varchar(60) DEFAULT NULL,
+  `user_cpf` varchar(14) DEFAULT NULL,
+  `cod_ven` int NOT NULL,
+  `user_sts` bit(1) DEFAULT NULL,  
   `cod_loj` int NOT NULL,
   `for_id` bigint DEFAULT NULL,
   PRIMARY KEY (`user_id`),

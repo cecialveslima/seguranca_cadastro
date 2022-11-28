@@ -17,7 +17,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "GroupModuleFuncionality")
-public class GroupModuleFuncionality implements Serializable {
+public class GroupModuleFuncionality  implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -39,6 +39,51 @@ public class GroupModuleFuncionality implements Serializable {
 	@ManyToOne //Funcionalidade
 	@JoinColumn(name = "fun_id", insertable = false, updatable = false)
 	private Funcionalidade FunId;
+
+	public GroupModuleFuncionality() {
+		
+	}
+	public GroupModuleFuncionality(GroupModuleFuncionalityEmb groupModuleFuncionality, Fornecedor forId, Group groupId,
+			Modulo moduleId, Funcionalidade funId) {
+		super();
+		GroupModuleFuncionality = groupModuleFuncionality;
+		ForId = forId;
+		GroupId = groupId;
+		ModuleId = moduleId;
+		FunId = funId;
+	}
+	public GroupModuleFuncionalityEmb getGroupModuleFuncionality() {
+		return GroupModuleFuncionality;
+	}
+	public void setGroupModuleFuncionality(GroupModuleFuncionalityEmb groupModuleFuncionality) {
+		GroupModuleFuncionality = groupModuleFuncionality;
+	}
+	public Fornecedor getForId() {
+		return ForId;
+	}
+	public void setForId(Fornecedor forId) {
+		ForId = forId;
+	}
+	public Group getGroupId() {
+		return GroupId;
+	}
+	public void setGroupId(Group groupId) {
+		GroupId = groupId;
+	}
+	public Modulo getModuleId() {
+		return ModuleId;
+	}
+	public void setModuleId(Modulo moduleId) {
+		ModuleId = moduleId;
+	}
+	public Funcionalidade getFunId() {
+		return FunId;
+	}
+	public void setFunId(Funcionalidade funId) {
+		FunId = funId;
+	}
+	
+	
 
 
 }

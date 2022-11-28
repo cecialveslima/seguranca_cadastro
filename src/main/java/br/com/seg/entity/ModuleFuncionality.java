@@ -21,4 +21,41 @@ public class ModuleFuncionality {
 	//@ManyToOne
 	@Column(name = "fun_id")
 	private String FunId;
+
+	
+	public ModuleFuncionality() {
+		
+	}
+	public ModuleFuncionality(ModuleFuncionalityEmb moduleFuncionality, String moduleFunId, String funId) {
+		super();
+		this.moduleFuncionality = moduleFuncionality;
+		ModuleFunId = moduleFunId;
+		FunId = funId;
+	}
+
+	public ModuleFuncionalityEmb getModuleFuncionality() {
+		return moduleFuncionality;
+	}
+
+	public void setModuleFuncionality(ModuleFuncionalityEmb moduleFuncionality) {
+		this.moduleFuncionality = moduleFuncionality;
+	}
+
+	public String getModuleFunId() {
+		return ModuleFunId;
+	}
+
+	public void setModuleFunId(String moduleFunId) {
+		ModuleFunId = moduleFunId;
+	}
+
+	public String getFunId() {
+		return FunId;
+	}
+
+	public void setFunId(String funId) {
+		FunId = funId;
+	}
+	
+	
 }

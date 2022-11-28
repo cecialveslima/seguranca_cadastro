@@ -15,4 +15,26 @@ public class ModuleFuncionalityEmb implements Serializable {
 	@Column(name = "fun_id")
 	private String FunId;
 
+	public ModuleFuncionalityEmb() {
+		
+	}
+	public ModuleFuncionalityEmb(String moduleFunId, String funId) {
+		super();
+		ModuleFunId = moduleFunId;
+		FunId = funId;
+	}
+	public String getModuleFunId() {
+		return ModuleFunId;
+	}
+	public void setModuleFunId(String moduleFunId) {
+		ModuleFunId = moduleFunId;
+	}
+	public String getFunId() {
+		return FunId;
+	}
+	public void setFunId(String funId) {
+		FunId = funId;
+	}
+
+	
 }

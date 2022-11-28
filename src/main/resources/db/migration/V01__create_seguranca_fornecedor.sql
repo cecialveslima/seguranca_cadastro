@@ -23,13 +23,17 @@ DROP TABLE IF EXISTS `fornecedor`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `fornecedor` (
-  `for_id` bigint NOT NULL AUTO_INCREMENT,
+  `for_id` bigint NOT NULL,
   `for_nom` varchar(60) NOT NULL,
   `for_sts` bit(1) NOT NULL,
   `for_mail` varchar(255) NOT NULL,
+  `for_cnpj` varchar(14) not null,
+  `telefone` varchar(13) not null,
+  
   PRIMARY KEY (`for_id`),
   UNIQUE KEY `UK_frspibcxdt873xj3u007ll4w1` (`for_mail`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+)ENGINE=InnoDB CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
