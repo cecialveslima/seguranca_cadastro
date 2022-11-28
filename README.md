@@ -1,7 +1,7 @@
 # seguranca_cadastro
 <h1> Projeto básico de cadastramento de logins, módulos e funcionalidades </h1>
 
-<b>Projeto com banco de dados MySQL
+<b>Projeto com banco de dados MySQL `` 
 Ordem de gravação das tabelas
 </b>
 
@@ -14,6 +14,7 @@ Ordem de gravação das tabelas
 </ol>
 
 <b> Depois criar as associações</b>
+ <ol>
 <li>UserGroups (usuários x grupos)</li>
 <li>ModuleFuncionality (módulos x funcionalidades) </li>
 <li>GroupModuleFuncionality (grupos x módulos x funcionalidades) </li>
