@@ -1,9 +1,7 @@
-# seguranca_cadastro
 <h1> Projeto básico de cadastramento de logins, módulos e funcionalidades </h1>
 
-<b>Projeto com banco de dados MySQL `` 
-Ordem de gravação das tabelas
-</b>
+<b><h5>Projeto com banco de dados MySQL</h5></b>  
+<b><h6>Ordem de gravação das tabelas</h6></b>
 
 <ol>
 <li>Fornecedor</li>
